@@ -44,6 +44,7 @@ class LoginForm(FlaskForm):
     user_id = StringField('Username/Email', validators=[DataRequired()])
     password = PasswordField('Password', validators=[DataRequired()])
     remember = BooleanField('Remember Me')
+    recaptcha = RecaptchaField('Recaptcha')
     submit = SubmitField('Login')
 
 class ChatForm(FlaskForm):
